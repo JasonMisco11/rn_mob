@@ -1,6 +1,6 @@
 import { Image } from 'expo-image';
 import { SymbolView } from 'expo-symbols';
-import { Platform, Pressable, ScrollView, StyleSheet } from 'react-native';
+import { Platform, Pressable, ScrollView, StyleSheet, ViewComponent } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ExternalLink } from '@/components/external-link';
@@ -43,8 +43,11 @@ export default function TabTwoScreen() {
           <ThemedText style={styles.centerText} themeColor="textSecondary">
             This starter app includes example{'\n'}code to help you get started.
           </ThemedText>
-          {/* test */}
-          <ViewOutput>Test</ViewOutput>
+          {/* test  react native*/}
+          <ViewComponent>TEST</ViewComponent>
+          <ViewComponent>Exp tracker</ViewComponent>
+          
+          
 
           <ExternalLink href="https://docs.expo.dev" asChild>
             <Pressable style={({ pressed }) => pressed && styles.pressed}>
@@ -119,6 +122,8 @@ export default function TabTwoScreen() {
               the powerful <ThemedText type="code">react-native-reanimated</ThemedText> library to
               animate opening this hint.
             </ThemedText>
+            
+            
           </Collapsible>
         </ThemedView>
         {Platform.OS === 'web' && <WebBadge />}
